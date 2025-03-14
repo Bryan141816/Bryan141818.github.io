@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt Decrypt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 id="mobile">
+        No mobile suppor yet.
+        <br>
+        Due to the UI design I use.
+    </h2>
+    <a id="github" target="_blank">
+        <img src="github.png" alt="">
+        <span>Source Code</span>
+    </a>
+    <div id="encrypt-window" class="view_window window">
+        <div class="top-info" id="encrypt_top">
+            Encrypt Decrypt
+            <button class="close-button" onclick="hideWindow('encrypt-window', 'encryptDecrypt')">X</button>
+        </div>
+        <div class="main-window-content">
+            <div class="input_container">
+                <span >Enter Text:</span>
+                <input type="text" required id="textval">
+            </div>
+            <br>
+            <div class="input_container">
+                <span>Enter Shift Amount:</span>
+                <input type="number" required id="shift">
+            </div>
+            <br>
+            <div class="input_container">
+                <span>Output:</span>
+                <input type="text" readonly id="output">
+            </div>
+            <br>
+            <div class="button-container">
+                <button id="encrypt">Encrypt</button>
+                <button id="decrypt">Decrypt</button>
+            </div>
+        </div>
+    </div>
+    <div id="video-window" class=" window">
+        <div class="top-info" id="video_top">
+            Video
+            <button class="close-button" onclick="hideWindow('video-window', 'video_tab')">X</button>
+        </div>
+        <div class="main-window-content">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9u6sovgxiH4?si=BgR-JmCxDiJlsse_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="discussion-window" class=" window">
+        <div class="top-info" id="discussion_top">
+            Discussion Board
+            <button class="close-button" onclick="hideWindow('discussion-window', 'discussion_tab')">X</button>
+        </div>
+        <div class="main-window-content">
+            <h3>Why Is Encryption Important?</h3>
+            <p>Encryption plays a vital role in securing sensitive information and ensuring privacy in digital communications. Its importance can be highlighted in the following key areas:</p>
+            <p class="indented">1. Data Protection – Encryption safeguards personal and financial data, preventing unauthorized access by cybercriminals.</p>
+            <p class="indented">2. Confidentiality in Communication – Encrypted messaging services, such as WhatsApp and Signal, ensure that conversations remain private and protected from eavesdropping.</p>
+            <br>
+            <h3>Can Encryption Be Misused?</h3>
+            <p>Despite its advantages, encryption can be exploited for malicious purposes. Some scenarios where encryption is misused include:</p>
+            <p class="indented">1. Criminal Activities – Cybercriminals use encryption to hide illegal activities, such as money laundering and ransomware attacks.</p>
+            <p class="indented">2. Obstruction of Justice – Encryption can be used to prevent law enforcement agencies from accessing critical information related to criminal investigations.</p>
+            <br>
+            <h3>Ethical Concerns About Encryption</h3>
+            <p>The ethical implications of encryption have sparked global debates, especially concerning the balance between privacy and security. Some real-life ethical concerns include:</p>
+            <p class="indented">1. Apple vs. FBI (2016) – The FBI requested Apple to unlock an iPhone belonging to a suspect in the San Bernardino terrorist attack. Apple refused, citing privacy concerns (Greenberg, 2016).</p>
+            <p class="indented">2. End-to-End Encryption and Law Enforcement – Governments have expressed concerns over end-to-end encryption used in apps like WhatsApp, arguing that it hinders their ability to investigate criminal activities (Newman, 2020).</p>
+        </div>
+    </div>
+    <footer id="bar">
+        <button id="encryptDecrypt" class="button-tab current_tab" onclick="viewWindow('encrypt-window', 'encryptDecrypt')">Encrypt Decrypt</button>
+        <button id="video_tab" class="button-tab" onclick="viewWindow('video-window', 'video_tab')">Video</button>
+        <button id="discussion_tab" class="button-tab" onclick="viewWindow('discussion-window', 'discussion_tab')">Discussion Board</button>
+    </footer>
+    <script src="script.js"></script>
+    <script src="drag.js"></script>
+</body>
+</html>
